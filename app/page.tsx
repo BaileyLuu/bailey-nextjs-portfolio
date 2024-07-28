@@ -71,46 +71,6 @@ export default function Page() {
             className="rounded-lg object-cover object-top sm:object-center"
           />
         </div>
-        {/* <div className="relative">
-          <Image
-            alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
-            src={ship}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-        </div> */}
-        {/* <div className="relative row-span-2">
-          <Image
-            alt="Me, Lydia, and Delba filming the Next.js Conf keynote"
-            src={filming}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover sm:object-center"
-          />
-        </div> */}
-        {/* <div className="relative row-span-2">
-          <Image
-            alt="My badge on top of a pile of badges from a Vercel meetup we held"
-            src={meetups}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-        </div> */}
-        {/* <div className="relative h-40">
-          <Image
-            alt="Me standing on stage at SmashingConf giving a talk about my optimism for the web"
-            src={smashing}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-        </div> */}
       </div>
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
