@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const experiences = [
   {
     year: '2023 - Present',

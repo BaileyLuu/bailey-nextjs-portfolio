@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 import { CustomMDX } from 'app/components/mdx';
 import { getViewsCount } from 'app/db/queries';
 import { getBlogPosts } from 'app/db/blog';
-import ViewCounter from '../view-counter';
 import { increment } from 'app/db/actions';
+import ViewCounter from '../view-counter';
 import { unstable_noStore as noStore } from 'next/cache';
 
 export async function generateMetadata({
@@ -23,8 +23,8 @@ export async function generateMetadata({
     image,
   } = post.metadata;
   let ogImage = image
-    ? `https://leerob.io${image}`
-    : `https://leerob.io/og?title=${title}`;
+    ? `https://bailey-nextjs-portfolio.vercel.app${image}`
+    : `https://bailey-nextjs-portfolio.vercel.app/og?title=${title}`;
 
   return {
     title,
@@ -34,7 +34,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://leerob.io/blog/${post.slug}`,
+      url: `https://bailey-nextjs-portfolio.vercel.app/blog/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -103,12 +103,12 @@ export default function Blog({ params }) {
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
             image: post.metadata.image
-              ? `https://leerob.io${post.metadata.image}`
-              : `https://leerob.io/og?title=${post.metadata.title}`,
-            url: `https://leerob.io/blog/${post.slug}`,
+              ? `https://bailey-nextjs-portfolio.vercel.app${post.metadata.image}`
+              : `https://bailey-nextjs-portfolio.vercel.app/og?title=${post.metadata.title}`,
+            url: `https://bailey-nextjs-portfolio.vercel.app/blog/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'Lee Robinson',
+              name: 'Bailey Luu',
             },
           }),
         }}
@@ -140,3 +140,4 @@ async function Views({ slug }: { slug: string }) {
   incrementViews(slug);
   return <ViewCounter allViews={views} slug={slug} />;
 }
+
